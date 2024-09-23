@@ -1,0 +1,117 @@
+
+import { Link } from 'react-router-dom';
+import ProductCard from '../../../components/ProductCard';
+import useProductData from '../../../hooks/useProductData';
+
+import img1 from "../../../assets/AllSubBannerPngImg/file.png";
+
+import img2 from "../../../assets/AllSubBannerPngImg/tshirt.png";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+
+const CurrentTopSells = () => {
+    const { data, loading, error } = useProductData();
+    if (loading) {
+        return <p>Loading.......</p>
+    }
+    if (error) {
+        alert(error.message)
+    }
+
+    const filterData = data?.slice(2, 9);
+
+    return (
+        <section className="flex flex-col container mx-auto">
+            <h2 className="text-3xl font-semibold text-black my-6">Current Top Sellers:-  <Link className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
+            <div>
+                <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={30}
+                    slidesPerView={6}
+                    loop={true}
+
+                    pagination={{ clickable: true }}
+
+
+
+                >
+                    {
+                        filterData && filterData.map((product) => (
+                            <SwiperSlide key={product.id}>
+                                <div>
+                                    <ProductCard product={product} />
+                                </div>
+                            </SwiperSlide>
+                        ))
+                    }
+
+                </Swiper>
+            </div>
+
+            <div className='flex gap-12 my-12'>
+                <div className='w-full h-[250px] rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-12 shadow-lg'>
+                    <div className="w-full h-[200px]   transform transition hover:scale-105 duration-700 rounded-lg  flex  items-center">
+                        {/* Left Side: Product Information */}
+                        <div className="flex-1 text-white space-y-3">
+                            <h2 className="text-4xl font-bold">Men T-Shirt</h2>
+                            <p className="text-2xl font-semibold">Lorem ipsum dolor, sit amet  Suscipit, repudiandae.</p>
+                            <button className="px-6 py-4 bg-gradient-to-r from-purple-700 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
+                                Shop Now
+                            </button>
+                        </div>
+
+                        {/* Right Side: Product Image with same gradient background */}
+                        <div className="flex-shrink-0  rounded-lg">
+                            <div className="relative w-[150px] h-[200px] rounded-lg">
+                                <img
+                                    src={img1} // Replace with your PNG image URL
+                                    alt="Product"
+                                    className="absolute inset-0 w-full h-full object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='w-full h-[250px] rounded-lg bg-gradient-to-r from-yellow-500 to-pink-500 p-12 shadow-lg'>
+                    <div className="w-full h-[200px]   transform transition hover:scale-105 duration-700 rounded-lg  flex  items-center">
+                        {/* Left Side: Product Information */}
+                        <div className="flex-1 text-white space-y-3">
+                            <h2 className="text-4xl font-bold">Men T-Shirt</h2>
+                            <p className="text-xl font-semibold">Lorem ipsum dolor, sit amet consecSuscipit, repudiandae.</p>
+                            <button className="px-6 py-4 bg-gradient-to-r from-yellow-500 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
+                                Shop Now
+                            </button>
+                        </div>
+
+                        {/* Right Side: Product Image with same gradient background */}
+                        <div className="flex-shrink-0  rounded-lg">
+                            <div className="relative w-[150px] h-[200px] rounded-lg">
+                                <img
+                                    src={img2} // Replace with your PNG image URL
+                                    alt="Product"
+                                    className="absolute inset-0 w-full h-full object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+    );
+};
+
+export default CurrentTopSells;
