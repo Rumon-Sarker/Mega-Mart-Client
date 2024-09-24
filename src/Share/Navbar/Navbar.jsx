@@ -12,7 +12,7 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li className='text-lg font-bold'><Link to="/">Home</Link></li>
-                            <li className='text-lg font-bold'><Link to="/director"> Shop</Link></li>
+                            <li className='text-lg font-bold'><Link to="/shop"> Shop</Link></li>
                             <li>
                                 <details>
                                     <summary className="lg:text-lg font-bold">Products</summary>
@@ -36,14 +36,14 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li className='text-lg font-bold'><Link to="/">Home</Link></li>
-                        <li className='text-lg font-bold'><Link to="/director"> Shop</Link></li>
-                        <li>
+                        <li className='text-lg font-bold'><Link to="/shop"> Shop</Link></li>
+                        <li >
                             <details>
                                 <summary className="lg:text-lg font-bold">Products</summary>
-                                <ul className="font-semibold">
-                                    <li className='text-sm '><Link to="/latest-products">latest-products-manual </Link></li>
-                                    <li className='text-sm '><Link to="/products-catalogues">ProductCatalogue</Link></li>
-                                    <li className='text-sm '><Link to="/product-list">Product-List</Link></li>
+                                <ul className="w-40">
+                                    <li className='text-sm '><Link to="/">New Product</Link></li>
+                                    <li className='text-sm '><Link to="/">Old Product</Link></li>
+                                    <li className='text-sm '><Link to="/shop">All Product</Link></li>
                                 </ul>
                             </details>
                         </li>

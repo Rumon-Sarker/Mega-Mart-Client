@@ -16,9 +16,9 @@ const Footer = () => {
 
                 <h1 className="text-4xl font-bold">SUBSCRIBE TO OUR NEWSLETTER</h1>
                 <p className="text-lg">Get the latest updates on new products and upcoming sales</p>
-                <div className="flex justify-center gap-3 items-center rounded">
-                    <input className="p-4 w-96 border border-gray-300 rounded " placeholder="Enter Your Email Addres" type="text" />
-                    <button className="px-12 py-5 bg-orange-500 rounded-full uppercase text-xl text-white font-bold">Submit</button>
+                <div className="flex justify-center gap- items-center rounded">
+                    <input className="p-3 w-96 border border-r-0 border-gray-300 rounded-l " placeholder="Enter Your Email Addres" type="text" />
+                    <button className="px-12 py-4 bg-orange-500 rounded-r uppercase text-sm text-white">Submit</button>
                 </div>
             </div>
 
