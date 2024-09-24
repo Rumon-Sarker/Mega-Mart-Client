@@ -30,39 +30,39 @@ const Footer = () => {
             <footer className="footer container mx-auto  text-base-content py-12">
                 <nav className="space-y-3 text-gray-700">
                     <h6 className="footer-title text-black text-3xl">Shope</h6>
-                    <a className="link text-xl link-hover">Electronics</a>
-                    <a className="link text-xl link-hover">Computers & Laptops</a>
-                    <a className="link text-xl link-hover">Smartphones & Tablets</a>
-                    <a className="link text-xl link-hover">Cameras</a>
-                    <a className="link text-xl link-hover">Video Games & Systems</a>
-                    <a className="link text-xl link-hover">Home Furniture</a>
-                    <a className="link text-xl link-hover">Weekly Special</a>
+                    <a className="link text-base link-hover">Electronics</a>
+                    <a className="link text-base link-hover">Computers & Laptops</a>
+                    <a className="link text-base link-hover">Smartphones & Tablets</a>
+                    <a className="link text-base link-hover">Cameras</a>
+                    <a className="link text-base link-hover">Video Games & Systems</a>
+                    <a className="link text-base link-hover">Home Furniture</a>
+                    <a className="link text-base link-hover">Weekly Special</a>
                 </nav>
                 <nav className="space-y-3 text-gray-700">
                     <h6 className="footer-title text-black text-3xl">Top Brands</h6>
-                    <a className="link text-xl link-hover">Coco Lee</a>
-                    <a className="link text-xl link-hover">Anna</a>
-                    <a className="link text-xl link-hover">French Connection</a>
-                    <a className="link text-xl link-hover">Jimmy Choo</a>
-                    <a className="link text-xl link-hover">Chanel</a>
-                    <a className="link text-xl link-hover">Collette</a>
-                    <a className="link text-xl link-hover">View All</a>
+                    <a className="link text-base link-hover">Coco Lee</a>
+                    <a className="link text-base link-hover">Anna</a>
+                    <a className="link text-base link-hover">French Connection</a>
+                    <a className="link text-base link-hover">Jimmy Choo</a>
+                    <a className="link text-base link-hover">Chanel</a>
+                    <a className="link text-base link-hover">Collette</a>
+                    <a className="link text-base link-hover">View All</a>
                 </nav>
                 <nav className="space-y-3 text-gray-700">
                     <h6 className="footer-title text-black text-3xl">Further Info.</h6>
-                    <a className="link text-xl link-hover">About Us</a>
-                    <a className="link text-xl link-hover">Contact Us</a>
-                    <a className="link text-xl link-hover">Shipping & Return</a>
-                    <a className="link text-xl link-hover">Privacy Policy</a>
-                    <a className="link text-xl link-hover">Terms & Conditions</a>
-                    <a className="link text-xl link-hover">Blog</a>
+                    <a className="link text-base link-hover">About Us</a>
+                    <a className="link text-base link-hover">Contact Us</a>
+                    <a className="link text-base link-hover">Shipping & Return</a>
+                    <a className="link text-base link-hover">Privacy Policy</a>
+                    <a className="link text-base link-hover">Terms & Conditions</a>
+                    <a className="link text-base link-hover">Blog</a>
 
                 </nav>
                 <nav className="space-y-5 mt-16 text-gray-700">
 
-                    <h2 className="flex  gap-2 text-xl"><CiLocationOn className="text-4xl" />685 Market Street San Dhaka, <br /> CA 94105, Bangldesh</h2>
-                    <h2 className="flex  gap-2 text-xl"><MdCall className="text-4xl" />Call Now- 01783526467</h2>
-                    <h2 className="flex  gap-2 text-xl"><MdEmail className="text-4xl" />mdsrrumon1234@gmail.com</h2>
+                    <h2 className="flex  gap-2 text-base"><CiLocationOn className="text-3xl" />685 Market Street San Dhaka, <br /> CA 94105, Bangldesh</h2>
+                    <h2 className="flex  gap-2 text-base"><MdCall className="text-3xl" />Call Now- 01783526467</h2>
+                    <h2 className="flex  gap-2 text-base"><MdEmail className="text-3xl" />mdsrrumon1234@gmail.com</h2>
 
                     <div className="flex gap-2 items-center">
                         <Link>
@@ -87,30 +87,30 @@ const Footer = () => {
 
 
             {/* Bottom Footer Sections  */}
-            <footer className="footer container mx-auto  text-base-content  border-t-2 border-gray-400 px-10 py-4">
+            <footer className="footer container mx-auto  text-base-content  border-t-2 border-gray-400  py-4">
                 <aside className="grid-flow-col  items-center text-gray-600">
 
                     <p>
                         @ MegaMart Industries Ltd. Providing reliable tech since #2024
                         <br />
-                        develop by @@Rumon Sarker Rubel
+                        Developer by @@Rumon Sarker Rubel
                     </p>
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col items-center gap-4">
 
                         <a>
-                            <img className="w-12 cursor-pointer" src={bkashLogo} alt="bkashLogo" />
+                            <img className="w-8 cursor-pointer" src={bkashLogo} alt="bkashLogo" />
                         </a>
 
                         <a>
-                            <img className="w-16 cursor-pointer" src={dutchBanglaLogo} alt="dutchBanglaLogo" />
+                            <img className="w-8 cursor-pointer" src={dutchBanglaLogo} alt="dutchBanglaLogo" />
                         </a>
                         <a>
-                            <img className="w-12 cursor-pointer" src={stripe} alt="dutchBanglaLogo" />
+                            <img className="w-8 cursor-pointer" src={stripe} alt="dutchBanglaLogo" />
                         </a>
                         <a>
-                            <img className="w-12 cursor-pointer" src={nagadLogo} alt="nagadLogo" />
+                            <img className="w-8 cursor-pointer" src={nagadLogo} alt="nagadLogo" />
                         </a>
 
                     </div>

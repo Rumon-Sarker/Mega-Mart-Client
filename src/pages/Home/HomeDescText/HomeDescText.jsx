@@ -29,7 +29,7 @@ const HomeDescText = () => {
             <br />
 
 
-            <div className={`${show ? "block" : "hidden"} mt-5`}>
+            <div className={`transition-all duration-500  overflow-hidden ${show ? 'max-h-screen' : 'max-h-0'} mt-5 `}>
                 <h1 className="text-3xl">What is Lorem Ipsum ?</h1>
                 <br />
                 <p>

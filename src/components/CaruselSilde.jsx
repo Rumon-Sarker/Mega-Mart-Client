@@ -13,7 +13,7 @@ const CaruselSilde = () => {
     const { data } = useProductData();
 
     return (
-        <div className='w-[790px] shadow-2xl  px-4'>
+        <div className='w-[770px] container mx-auto shadow-2xl  px-4'>
             <Swiper
                 navigation={true}
                 modules={[Navigation]}
