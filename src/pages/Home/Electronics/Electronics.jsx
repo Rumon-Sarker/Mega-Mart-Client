@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
-import img1 from "../../../assets/AllSubBannerPngImg/tshirt.png"
+
+import headphone from "../../../assets/AllSubBannerPngImg/headphone.png";
+import laptop from "../../../assets/AllSubBannerPngImg/laptop.png";
+import ledTv from "../../../assets/AllSubBannerPngImg/LedTv.png";
+import smartPhone from "../../../assets/AllSubBannerPngImg/smartPhone.png";
+import tv from "../../../assets/AllSubBannerPngImg/Tv.png";
+import offerTv from "../../../assets/AllSubBannerPngImg/offerTv.png";
+import watch from "../../../assets/AllSubBannerPngImg/watch.png";
+
+
 import CaruselSilde from "../../../components/CaruselSilde";
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
 
@@ -26,7 +35,7 @@ const Electronics = () => {
                             <div className="flex-shrink-0  rounded-lg">
                                 <div className="relative w-[150px] h-[180px] rounded-lg">
                                     <img
-                                        src={img1} // Replace with your PNG image URL
+                                        src={offerTv} // Replace with your PNG image URL
                                         alt="Product"
                                         className="absolute inset-0 w-full h-full object-contain"
                                     />
@@ -48,7 +57,7 @@ const Electronics = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={smartPhone} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between shadow-lg ">
@@ -57,7 +66,7 @@ const Electronics = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={laptop} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between  shadow-lg">
@@ -66,7 +75,7 @@ const Electronics = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={ledTv} alt="" />
                         </div>
                     </div>
                     <Link>
@@ -81,11 +90,11 @@ const Electronics = () => {
 
             <div className='flex gap-2 my-12'>
 
-                <CategoryBottomBanner img={img1} bgColor={"from-blue-500 to-green-300"} name={"Alays All Time"} subName={"Starting at $2400"} />
+                <CategoryBottomBanner img={watch} bgColor={"from-blue-500 to-green-300"} name={"Alays All Time"} subName={"Starting at $2400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-blue-500 to-green-300"} name={"HeadPhones"} subName={"Starting at $400"} />
+                <CategoryBottomBanner img={headphone} bgColor={"from-blue-500 to-green-300"} name={"HeadPhones"} subName={"Starting at $400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-blue-500 to-green-300"} name={"Led TVs "} subName={"Starting at $3200"} />
+                <CategoryBottomBanner img={tv} bgColor={"from-blue-500 to-green-300"} name={"Led TVs "} subName={"Starting at $3200"} />
 
             </div>
         </section>

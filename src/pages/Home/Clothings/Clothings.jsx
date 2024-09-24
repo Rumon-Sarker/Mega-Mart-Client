@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 import img1 from "../../../assets/AllSubBannerPngImg/tshirt.png"
+import menShirt from "../../../assets/AllSubBannerPngImg/Menshirt.png";
+import womenTshirt from "../../../assets/AllSubBannerPngImg/womenTshirt.png";
+import babyFs from "../../../assets/AllSubBannerPngImg/BayFs.png";
+import KidsFs from "../../../assets/AllSubBannerPngImg/KidsFs.png";
+import menFs from "../../../assets/AllSubBannerPngImg/MenFs.png";
+
+
 import CaruselSilde from "../../../components/CaruselSilde";
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
 // import useProductData from "../../../hooks/useProductData";
@@ -20,17 +27,17 @@ const Clothings = () => {
                             {/* Left Side: Product Information */}
                             <div className="flex-1 text-center text-white space-y-3">
                                 <p className="uppercase text-3xl font-bold">Sale up to </p>
-                                <h2 className="text-8xl font-bold text-yellow-400">50%</h2>
+                                <h2 className="text-6xl font-bold text-yellow-400">50%</h2>
                                 <p className="text-xl font-semibold">sit amet consecSuscipit, repudiandae.</p>
 
                             </div>
 
                             {/* Right Side: Product Image with same gradient background */}
                             <div className="flex-shrink-0  rounded-lg">
-                                <div className="relative w-[150px] h-[180px] rounded-lg">
+                                <div className="relative w-[450px] h-[200px] -rotate-12 rounded-lg">
                                     <img
-                                        src={img1} // Replace with your PNG image URL
-                                        alt="Product"
+                                        src={menShirt} // Replace with your PNG image URL
+                                        alt="menShirt"
                                         className="absolute inset-0 w-full h-full object-contain"
                                     />
                                 </div>
@@ -60,7 +67,7 @@ const Clothings = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-24" src={womenTshirt} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between  shadow-lg">
@@ -69,7 +76,7 @@ const Clothings = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={KidsFs} alt="" />
                         </div>
                     </div>
                     <Link>
@@ -84,11 +91,11 @@ const Clothings = () => {
 
             <div className='flex gap-2 my-12'>
 
-                <CategoryBottomBanner img={img1} bgColor={"from-blue-500 to-orange-500"} name={"Men Collactions"} subName={"Starting at $2400"} />
+                <CategoryBottomBanner img={menFs} bgColor={"from-blue-500 to-orange-500"} name={"Men Collactions"} subName={"Starting at $2400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-purple-500 to-pink-500"} name={"Women Collations"} subName={"Starting at $400"} />
+                <CategoryBottomBanner img={womenTshirt} bgColor={"from-purple-500 to-pink-500"} name={"Women Collations"} subName={"Starting at $400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-yellow-500 to-pink-500"} name={"All For Babys "} subName={"Starting at $3200"} />
+                <CategoryBottomBanner img={babyFs} bgColor={"from-yellow-500 to-pink-500"} name={"All For Babys "} subName={"Starting at $3200"} />
 
             </div>
         </section>

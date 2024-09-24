@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../../../components/ProductCard';
 import useProductData from '../../../hooks/useProductData';
 
-import img1 from "../../../assets/AllSubBannerPngImg/file.png";
+import rewordImg from "../.././../assets/AllSubBannerPngImg/rewords.png";
+import ledTv from "../.././../assets/AllSubBannerPngImg/LedTv.png";
 
-import img2 from "../../../assets/AllSubBannerPngImg/tshirt.png";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -62,7 +63,7 @@ const CurrentTopSells = () => {
                     <div className="w-full h-[200px]   transform transition hover:scale-105 duration-700 rounded-lg  flex  items-center">
                         {/* Left Side: Product Information */}
                         <div className="flex-1 text-white space-y-3">
-                            <h2 className="text-4xl font-bold">Men T-Shirt</h2>
+                            <h2 className="text-4xl font-bold">World Fist HD LED Tv</h2>
                             <p className="text-2xl font-semibold">Lorem ipsum dolor, sit amet  Suscipit, repudiandae.</p>
                             <button className="px-6 py-4 bg-gradient-to-r from-purple-700 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
                                 Shop Now
@@ -71,10 +72,10 @@ const CurrentTopSells = () => {
 
                         {/* Right Side: Product Image with same gradient background */}
                         <div className="flex-shrink-0  rounded-lg">
-                            <div className="relative w-[150px] h-[200px] rounded-lg">
+                            <div className="relative w-[250px] h-[200px] rounded-lg">
                                 <img
-                                    src={img1} // Replace with your PNG image URL
-                                    alt="Product"
+                                    src={ledTv} // Replace with your PNG image URL
+                                    alt="ledTv"
                                     className="absolute inset-0 w-full h-full object-contain"
                                 />
                             </div>
@@ -85,7 +86,7 @@ const CurrentTopSells = () => {
                     <div className="w-full h-[200px]   transform transition hover:scale-105 duration-700 rounded-lg  flex  items-center">
                         {/* Left Side: Product Information */}
                         <div className="flex-1 text-white space-y-3">
-                            <h2 className="text-4xl font-bold">Men T-Shirt</h2>
+                            <h2 className="text-4xl font-bold">Rewords Programs</h2>
                             <p className="text-xl font-semibold">Lorem ipsum dolor, sit amet consecSuscipit, repudiandae.</p>
                             <button className="px-6 py-4 bg-gradient-to-r from-yellow-500 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
                                 Shop Now
@@ -94,10 +95,10 @@ const CurrentTopSells = () => {
 
                         {/* Right Side: Product Image with same gradient background */}
                         <div className="flex-shrink-0  rounded-lg">
-                            <div className="relative w-[150px] h-[200px] rounded-lg">
+                            <div className="relative w-[250px] h-[200px] rounded-lg">
                                 <img
-                                    src={img2} // Replace with your PNG image URL
-                                    alt="Product"
+                                    src={rewordImg} // Replace with your PNG image URL
+                                    alt="rewordImg"
                                     className="absolute inset-0 w-full h-full object-contain"
                                 />
                             </div>

@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import CaruselSilde from "../../../components/CaruselSilde";
+import badRoom from "../../../assets/AllSubBannerPngImg/badRoom.png";
+import dChair from "../../../assets/AllSubBannerPngImg/DChair.png";
+import Dtable from "../../../assets/AllSubBannerPngImg/DTable.png";
+import Rak from "../../../assets/AllSubBannerPngImg/Rak.png";
+import sofa from "../../../assets/AllSubBannerPngImg/sofa.png";
+import mora from "../../../assets/AllSubBannerPngImg/chair-png-40525.png";
 
-import img1 from "../../../assets/AllSubBannerPngImg/file.png";
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
 
 const Furnitures = () => {
@@ -27,7 +32,7 @@ const Furnitures = () => {
                             <div className="flex-shrink-0  rounded-lg">
                                 <div className="relative w-[150px] h-[180px] rounded-lg">
                                     <img
-                                        src={img1} // Replace with your PNG image URL
+                                        src={Dtable} // Replace with your PNG image URL
                                         alt="Product"
                                         className="absolute inset-0 w-full h-full object-contain"
                                     />
@@ -49,7 +54,7 @@ const Furnitures = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={mora} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between shadow-lg ">
@@ -58,7 +63,7 @@ const Furnitures = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={badRoom} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between  shadow-lg">
@@ -67,7 +72,7 @@ const Furnitures = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={sofa} alt="" />
                         </div>
                     </div>
                     <Link>
@@ -82,11 +87,11 @@ const Furnitures = () => {
 
             <div className='flex gap-2 my-12'>
 
-                <CategoryBottomBanner img={img1} bgColor={"from-red-500 to-orange-500"} name={"Retro Furniture"} subName={"Starting at $2400"} />
+                <CategoryBottomBanner img={sofa} bgColor={"from-red-500 to-orange-500"} name={"Retro Furniture"} subName={"Starting at $2400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-red-500 to-orange-300"} name={"Daining Chair Combo"} subName={"Starting at $400"} />
+                <CategoryBottomBanner img={dChair} bgColor={"from-red-500 to-orange-300"} name={"Daining Chair Combo"} subName={"Starting at $400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-red-500 to-orange-500"} name={"Win Rack Bottle "} subName={"Starting at $3200"} />
+                <CategoryBottomBanner img={Rak} bgColor={"from-red-500 to-orange-500"} name={"Win Rack Bottle "} subName={"Starting at $3200"} />
 
             </div>
         </section>

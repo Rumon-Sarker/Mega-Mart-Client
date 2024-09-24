@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import CaruselSilde from "../../../components/CaruselSilde";
 
 import img1 from "../../../assets/AllSubBannerPngImg/file.png";
+
+import vest from "../../../assets/AllSubBannerPngImg/vest.png";
+import tady from "../../../assets/AllSubBannerPngImg/tady.png";
+import kidapLay from "../../../assets/AllSubBannerPngImg/kidsPlays.png";
+import ketly from "../../../assets/AllSubBannerPngImg/kettle_PNG8711.png";
+import cooker from "../../../assets/AllSubBannerPngImg/cooker.png";
+import offerToy from "../../../assets/AllSubBannerPngImg/offerToy.png";
+
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
 
 
@@ -28,7 +36,7 @@ const Kids = () => {
                             <div className="flex-shrink-0  rounded-lg">
                                 <div className="relative w-[150px] h-[180px] rounded-lg">
                                     <img
-                                        src={img1} // Replace with your PNG image URL
+                                        src={offerToy} // Replace with your PNG image URL
                                         alt="Product"
                                         className="absolute inset-0 w-full h-full object-contain"
                                     />
@@ -50,7 +58,7 @@ const Kids = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={ketly} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between shadow-lg ">
@@ -59,7 +67,7 @@ const Kids = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={tady} alt="" />
                         </div>
                     </div>
                     <div className="w-[400px] h-32 rounded-lg flex items-center justify-between  shadow-lg">
@@ -68,7 +76,7 @@ const Kids = () => {
                             <Link className="hover:underline">Shop Now</Link>
                         </div>
                         <div className="flex mx-auto">
-                            <img className="h-20" src={img1} alt="" />
+                            <img className="h-20" src={cooker} alt="" />
                         </div>
                     </div>
                     <Link>
@@ -85,9 +93,9 @@ const Kids = () => {
 
                 <CategoryBottomBanner img={img1} bgColor={"from-lime-600 to-orange-300"} name={"Keep It Warm"} subName={"Starting at $2400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-orange-500 to-blue-500"} name={"Toys Set For Kids"} subName={"Starting at $400"} />
+                <CategoryBottomBanner img={kidapLay} bgColor={"from-orange-500 to-blue-500"} name={"Toys Set For Kids"} subName={"Starting at $400"} />
 
-                <CategoryBottomBanner img={img1} bgColor={"from-orange-500 to-blue-500"} name={"ARK Vest"} subName={"Starting at $3200"} />
+                <CategoryBottomBanner img={vest} bgColor={"from-orange-500 to-blue-500"} name={"ARK Vest"} subName={"Starting at $3200"} />
 
             </div>
         </section>

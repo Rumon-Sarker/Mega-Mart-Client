@@ -15,7 +15,7 @@ const CategoryBottomBanner = ({ img, name, subName, bgColor }) => {
 
                 {/* Right Side: Product Image with same gradient background */}
                 <div className="flex-shrink-0  rounded-lg">
-                    <div className="relative w-[150px] h-[200px] rounded-lg">
+                    <div className="relative w-[220px] h-[200px] rounded-lg">
                         <img
                             src={img} // Replace with your PNG image URL
                             alt="Product"
