@@ -17,14 +17,15 @@ const Navbar = () => {
                                 <details>
                                     <summary className="lg:text-lg font-bold">Products</summary>
                                     <ul className="font-semibold">
-                                        <li className='text-sm '><Link to="/latest-products">latest-products-manual </Link></li>
-                                        <li className='text-sm '><Link to="/products-catalogues">ProductCatalogue</Link></li>
-                                        <li className='text-sm '><Link to="/product-list">Product-List</Link></li>
+                                        <li className='text-sm '><Link to="/">New Product</Link></li>
+                                        <li className='text-sm '><Link to="/">Old Product</Link></li>
+                                        <li className='text-sm '><Link to="/shop">All Product</Link></li>
+                                        <li className='text-sm '><Link to="/shop">UpComaing Product</Link></li>
                                     </ul>
                                 </details>
                             </li>
 
-                            <li className='text-lg font-bold'><Link to="/certification">Blog</Link></li>
+                            <li className='text-lg font-bold'><Link to="/blogs">Blog</Link></li>
                             <li className='text-lg font-bold'><Link to="/contact">Contact us</Link></li>
                             <li className='text-lg font-bold'><Link to="/contact">About us</Link></li>
                         </ul>
@@ -40,18 +41,20 @@ const Navbar = () => {
                         <li >
                             <details>
                                 <summary className="lg:text-lg font-bold">Products</summary>
-                                <ul className="w-40">
+                                <ul className="w-48">
+                                    <li className='text-sm '><Link to="/shop">UpComaing Product</Link></li>
                                     <li className='text-sm '><Link to="/">New Product</Link></li>
                                     <li className='text-sm '><Link to="/">Old Product</Link></li>
                                     <li className='text-sm '><Link to="/shop">All Product</Link></li>
+
                                 </ul>
                             </details>
                         </li>
-                        <li className='text-lg font-bold'><Link to="/contact">Collaction</Link></li>
-                        <li className='text-lg font-bold'><Link to="/certification">Blog</Link></li>
+                        <li className='text-lg font-bold'><Link to="/collections">Collaction</Link></li>
+                        <li className='text-lg font-bold'><Link to="/blogs">Blog</Link></li>
                         <li className='text-lg font-bold'><Link to="/contact">Contact us</Link></li>
 
-                        <li className='text-lg font-bold'><Link to="/contact">About us</Link></li>
+                        <li className='text-lg font-bold'><Link to="/about">About us</Link></li>
                     </ul>
                 </div>
 

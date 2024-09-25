@@ -6,7 +6,7 @@ const Shop = () => {
 
     const { data } = useProductData();
     return (
-        <section className="md:flex md:px-52 pt-40">
+        <section className="md:flex container mx-auto pt-40">
             {/* Category Sections  */}
             <div className="md:w-3/12 p-4 bg-slate-100">
                 <h1 className="text-xl font-bold border-b pb-4">SEARCH FOR PRODUCT</h1>
@@ -27,7 +27,7 @@ const Shop = () => {
             </div>
             {/* Product Sections  */}
             <div className="md:w-9/12 mx-auto bg-gray-50">
-                <h1 className="text-2xl md:text-4xl md:font-bold border-b-2  pb-3 uppercase ">All Products</h1>
+                {/* <h1 className="text-2xl md:text-4xl md:font-bold border-b-2  pb-3 uppercase ">All Products</h1> */}
                 <div className="flex items-center justify-between my-12">
                     <h1> SHOWING  Out OF  RESULT</h1>
                     <select className="select select-bordered max-w-xs">
