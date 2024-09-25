@@ -49,7 +49,7 @@ const TopNavbar = () => {
 
                             </p>
                         </Link>
-                        <Link>
+                        <Link to="/carts">
                             <p className="flex flex-col gap-2 items-center">
                                 <IoCartOutline className="text-4xl" />
                                 Cart

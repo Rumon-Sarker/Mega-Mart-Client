@@ -6,6 +6,7 @@ import Shop from "../pages/Shop/Shop";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Blogs from "../pages/Blogs/Blogs";
 import Collections from "../pages/Collections/Collections";
+import Carts from "../pages/Carts/Carts";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ export const router = createBrowserRouter([
             {
                 path: "/collections",
                 element: <Collections />
+
+            },
+            {
+                path: "/carts",
+                element: <Carts />
 
             }
         ]
