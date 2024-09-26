@@ -11,6 +11,7 @@ import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import Gifts from "../pages/Gifts/Gifts";
 import WishList from "../pages/WishList/WishList";
+import PrivetRoutes from "./PrivetRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -59,9 +60,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/carts",
-                element: <Carts />
+                element: <PrivetRoutes><Carts /></PrivetRoutes>
 
             },
+            // {
+            //     path: "/carts",
+            //     element: <Carts />
+
+            // },
             {
                 path: "/signin",
                 element: <SignIn />

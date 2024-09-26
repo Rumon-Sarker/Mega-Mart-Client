@@ -5,11 +5,17 @@ import TopNavbar from './Share/Navbar/TopNavbar'
 import Footer from './Share/Footer/Footer'
 import Navbar from './Share/Navbar/Navbar'
 import { useEffect, useState } from 'react'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from './services/firebase'
+import { useDispatch } from 'react-redux'
+import { clearUser, setUser } from './features/user/userSlice'
 
 function App() {
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const dispatch = useDispatch();
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -32,6 +38,19 @@ function App() {
   }, [lastScrollY]);
 
 
+  // firebase On Auth state change 
+  useEffect(() => {
+    const unsubscreibe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(setUser(user))
+
+      }
+      else {
+        dispatch(clearUser());
+      }
+    });
+    return () => unsubscreibe();
+  }, [dispatch])
 
   return (
     <>

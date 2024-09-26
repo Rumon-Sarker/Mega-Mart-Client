@@ -4,6 +4,8 @@ import SocialLogin from "../../components/SocialLogin";
 import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { signinUser } from "../../features/user/userSlice";
 
 
 
@@ -12,12 +14,12 @@ const SignIn = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const [showPass, setShowPass] = useState(false); // State to manage password visibility
-
     const handlePassShow = () => {
         setShowPass(!showPass); // Toggle password visibility
     };
-
+    const dispatch = useDispatch();
     const handaleSingIn = (data) => {
+        dispatch(signinUser({ email: data.email, password: data.password }))
         console.log("Login data is", data);
     }
 

@@ -4,9 +4,21 @@ import {
 
 import { GiSelfLove } from "react-icons/gi";
 import { IoCartOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { logOutUser } from "../../features/user/userSlice";
+import { auth } from "../../services/firebase";
 
 const TopNavbar = () => {
+    const dispatch = useDispatch();
+
+    const user = useSelector((state) => state?.user?.user);
+    const profileLogo = user?.email[0].toUpperCase();
+
+    const handlaeLogout = () => {
+        dispatch(logOutUser(auth))
+    }
+
     return (
         <section className="navbar bg-orange-500 fixed z-30 py-3 px-8 text-white">
             <div className="flex container mx-auto justify-between items-center">
@@ -42,13 +54,6 @@ const TopNavbar = () => {
 
                             </p>
                         </Link>
-                        <Link to={"/signin"}>
-                            <p className="flex flex-col text-sm gap-1 items-center">
-                                <FaRegUser className="text-2xl" />
-                                Sign In
-
-                            </p>
-                        </Link>
                         <Link to="/carts">
                             <p className="flex flex-col gap-1 text-sm items-center">
                                 <IoCartOutline className="text-2xl" />
@@ -56,6 +61,39 @@ const TopNavbar = () => {
 
                             </p>
                         </Link>
+
+                        {
+                            user && user ?
+
+
+                                <div className="dropdown dropdown-end">
+                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                        <p className="w-10 h-10 text-center flex items-center justify-center  bg-purple-500 text-white p-1 rounded-full font-bold">
+                                            {profileLogo}
+
+                                        </p>
+                                    </div>
+                                    <ul
+                                        tabIndex={0}
+                                        className="menu menu-sm dropdown-content space-y-3 text-black bg-slate-200 rounded-box z-[1] mt-3 w-40 p-2 shadow">
+                                        <li><a>Profile</a></li>
+                                        <li><a>Settings</a></li>
+                                        <li className="text-red-500"><button onClick={handlaeLogout}>LogOut</button></li>
+                                    </ul>
+                                </div>
+                                :
+                                <Link to={"/signin"}>
+                                    <p className="flex flex-col text-sm gap-1 items-center">
+                                        <FaRegUser className="text-2xl" />
+                                        Sign In
+
+                                    </p>
+                                </Link>
+
+
+                        }
+
+
                     </div>
                 </div>
             </div>

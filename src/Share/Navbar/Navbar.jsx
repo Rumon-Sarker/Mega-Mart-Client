@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
+
+
     return (
         <section className={`navbar  z-30 mt-20 w-full shadow-xl bg-white `}>
             <div className="container mx-auto flex justify-between">
