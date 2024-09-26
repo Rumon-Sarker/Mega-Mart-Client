@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Carts = () => {
 
@@ -77,7 +78,8 @@ const Carts = () => {
                 <div className="lg:w-8/12 bg-white p-6 rounded-lg shadow-lg">
                     <h1 className="text-2xl font-semibold mb-6">Your Shopping Cart</h1>
                     {cartItems.length === 0 ? (
-                        <p className="text-center text-gray-600">Your cart is empty.</p>
+
+                        <Link to={"/shop"} ><p className="text-center text-gray-600">Your cart is empty. <br /> <span className="text-2xl font-bold text-orange-600">You go to shoping</span> </p></Link>
                     ) : (
                         <div className="grid gap-6">
                             {cartItems.map((item) => (

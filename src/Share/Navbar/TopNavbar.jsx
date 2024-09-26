@@ -42,7 +42,7 @@ const TopNavbar = () => {
 
                             </p>
                         </Link>
-                        <Link>
+                        <Link to={"/signin"}>
                             <p className="flex flex-col gap-2 items-center">
                                 <FaRegUser className="text-4xl" />
                                 Sign In
