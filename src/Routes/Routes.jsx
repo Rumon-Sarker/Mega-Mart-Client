@@ -8,6 +8,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import Collections from "../pages/Collections/Collections";
 import Carts from "../pages/Carts/Carts";
 import SignIn from "../pages/SignIn/SignIn";
+import SignUp from "../pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
             {
                 path: "/signin",
                 element: <SignIn />
+
+            },
+            {
+                path: "/signup",
+                element: <SignUp />
 
             }
         ]
