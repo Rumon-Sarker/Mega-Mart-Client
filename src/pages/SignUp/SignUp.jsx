@@ -3,14 +3,21 @@ import SocialLogin from "../../components/SocialLogin";
 import loginImg from "../../assets/LoginImg/loginImg.png";
 import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const SignUp = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
     const [showPass, setShowPass] = useState(false); // State to manage password visibility
 
     const handlePassShow = () => {
         setShowPass(!showPass); // Toggle password visibility
     };
+
+    const handaleSignUp = (data) => {
+        console.log("from data is", data);
+    }
 
 
 
@@ -39,36 +46,45 @@ const SignUp = () => {
                         <h1 className='text-3xl text-center font-bold  pt-5'>Welcome to Our Shope!</h1>
                         <p className="text-lg text-center font-serif">Enter to get unlimited services</p>
 
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmit(handaleSignUp)} className="space-y-6">
                             <div>
                                 <label className="block mb-1 text-sm font-medium text-gray-600">Full Name <span className="text-xl text-red-500">*</span></label>
                                 <input
                                     type="text"
-
+                                    {...register("name", { required: true, })}
                                     className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                     placeholder="Enter your Full Name"
-                                    required
+
                                 />
+                                {errors.name && <span className="text-red-500 text-sm">Full name is Required</span>}
+
                             </div>
+
+
                             <div>
                                 <label className="block mb-1 text-sm font-medium text-gray-600">Email <span className="text-xl text-red-500">*</span></label>
                                 <input
                                     type="email"
 
+                                    {...register("email", { required: true })}
                                     className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                     placeholder="Enter your email"
-                                    required
+
                                 />
+                                {errors.email && <span className="text-red-500 text-sm">Email is Required</span>}
                             </div>
 
                             <div className="relative">
                                 <label className="block mb-1 text-sm font-medium text-gray-600">Password <span className="text-xl text-red-500">*</span></label>
                                 <input
-                                    type={showPass ? "text" : "password"} // Toggle input type
+                                    type={showPass ? "password" : "password"} // Toggle input type
+
+                                    {...register("password", { required: true, minLength: 8 })}
                                     className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                     placeholder="Enter your password"
-                                    required
+
                                 />
+
                                 <button
                                     type="button" // Prevent form submission
                                     onClick={handlePassShow}
@@ -76,17 +92,8 @@ const SignUp = () => {
                                 >
                                     {showPass ? <FaEye /> : <FaEyeSlash />} {/* Toggle eye icon */}
                                 </button>
-                            </div>
-
-                            {/* Remember Me Checkbox and Forgot Password */}
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center">
-                                    <input
-                                        type="checkbox"
-                                        className="w-4 h-4 text-indigo-500 border-gray-300 rounded focus:ring-indigo-400"
-                                    />
-                                    <label className="ml-2 text-sm text-gray-600">Remember me</label>
-                                </div>
+                                {errors.password?.type == "required" && <span className="text-red-500 text-sm">Password is Required</span>}
+                                {errors.password?.type == "minLength" && <span className="text-red-500 text-sm">Password Mustbe 6 character</span>}
                             </div>
 
                             <div>

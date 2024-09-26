@@ -3,16 +3,23 @@ import loginImg from "../../assets/LoginImg/loginImg.png";
 import SocialLogin from "../../components/SocialLogin";
 import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 
 
 const SignIn = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
     const [showPass, setShowPass] = useState(false); // State to manage password visibility
 
     const handlePassShow = () => {
         setShowPass(!showPass); // Toggle password visibility
     };
+
+    const handaleSingIn = (data) => {
+        console.log("Login data is", data);
+    }
 
     return (
         <section className="pt-40 container mx-auto">
@@ -28,25 +35,27 @@ const SignIn = () => {
                         <h1 className='text-3xl font-bold  pt-5'>Welcome back !</h1>
                         <p className="text-lg font-serif">Enter to get unlimited services</p>
 
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmit(handaleSingIn)} className="space-y-6">
                             <div>
                                 <label className="block mb-1 text-sm font-medium text-gray-600">Email <span className="text-xl text-red-500">*</span></label>
                                 <input
                                     type="email"
-
+                                    {...register("email", { required: true })}
                                     className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                     placeholder="Enter your email"
-                                    required
+
                                 />
+                                {errors.email && <span className="text-red-500 text-sm">Email is Required</span>}
                             </div>
 
                             <div className="relative">
                                 <label className="block mb-1 text-sm font-medium text-gray-600">Password <span className="text-xl text-red-500">*</span></label>
                                 <input
                                     type={showPass ? "text" : "password"} // Toggle input type
+                                    {...register("password", { required: true })}
                                     className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                     placeholder="Enter your password"
-                                    required
+
                                 />
                                 <button
                                     type="button" // Prevent form submission
@@ -56,11 +65,13 @@ const SignIn = () => {
                                     {showPass ? <FaEye /> : <FaEyeSlash />} {/* Toggle eye icon */}
                                 </button>
                             </div>
+                            {errors.password?.type == "required" && <span className="text-red-500 text-sm">Password is Required</span>}
 
                             {/* Remember Me Checkbox and Forgot Password */}
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center">
                                     <input
+                                        required
                                         type="checkbox"
                                         className="w-4 h-4 text-indigo-500 border-gray-300 rounded focus:ring-indigo-400"
                                     />

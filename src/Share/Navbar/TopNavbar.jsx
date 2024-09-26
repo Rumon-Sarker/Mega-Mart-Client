@@ -30,28 +30,28 @@ const TopNavbar = () => {
                 <div>
                     <div className="flex gap-12">
                         <Link to={"/wishlist"}>
-                            <h2 className="flex flex-col gap-2 items-center">
-                                <GiSelfLove className="text-4xl" />
+                            <h2 className="flex flex-col text-sm gap-1 items-center">
+                                <GiSelfLove className="text-2xl" />
                                 Wish List
                             </h2>
                         </Link>
                         <Link to={"/gifts"}>
-                            <p className="flex flex-col gap-2 items-center">
-                                <FaGift className="text-4xl" />
+                            <p className="flex flex-col text-sm  gap-1 items-center">
+                                <FaGift className="text-2xl" />
                                 Gift Cards
 
                             </p>
                         </Link>
                         <Link to={"/signin"}>
-                            <p className="flex flex-col gap-2 items-center">
-                                <FaRegUser className="text-4xl" />
+                            <p className="flex flex-col text-sm gap-1 items-center">
+                                <FaRegUser className="text-2xl" />
                                 Sign In
 
                             </p>
                         </Link>
                         <Link to="/carts">
-                            <p className="flex flex-col gap-2 items-center">
-                                <IoCartOutline className="text-4xl" />
+                            <p className="flex flex-col gap-1 text-sm items-center">
+                                <IoCartOutline className="text-2xl" />
                                 Cart
 
                             </p>

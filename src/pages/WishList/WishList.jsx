@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaTrash } from "react-icons/fa";
 
 const WishList = () => {
     const [wishlistItems, setWishlistItems] = useState([
@@ -48,7 +49,7 @@ const WishList = () => {
                             <div className="flex space-x-4">
                                 <button
                                     onClick={() => addToCart(item.id)}
-                                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
                                 >
                                     Add to Cart
                                 </button>
@@ -56,7 +57,7 @@ const WishList = () => {
                                     onClick={() => removeItem(item.id)}
                                     className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
                                 >
-                                    Remove
+                                    <FaTrash />
                                 </button>
                             </div>
                         </div>
