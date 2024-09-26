@@ -36,7 +36,7 @@ const SignUp = () => {
                             <FaLock className="text-4xl text-indigo-500" />
                         </div>
 
-                        <h1 className='text-3xl text-center font-bold  pt-5'>Welcome back !</h1>
+                        <h1 className='text-3xl text-center font-bold  pt-5'>Welcome to Our Shope!</h1>
                         <p className="text-lg text-center font-serif">Enter to get unlimited services</p>
 
                         <form className="space-y-6">

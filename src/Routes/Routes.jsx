@@ -9,6 +9,8 @@ import Collections from "../pages/Collections/Collections";
 import Carts from "../pages/Carts/Carts";
 import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
+import Gifts from "../pages/Gifts/Gifts";
+import WishList from "../pages/WishList/WishList";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +45,16 @@ export const router = createBrowserRouter([
             {
                 path: "/collections",
                 element: <Collections />
+
+            },
+            {
+                path: "/wishlist",
+                element: <WishList />
+
+            },
+            {
+                path: "/gifts",
+                element: <Gifts />
 
             },
             {

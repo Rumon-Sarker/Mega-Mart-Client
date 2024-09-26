@@ -29,13 +29,13 @@ const TopNavbar = () => {
                 </div>
                 <div>
                     <div className="flex gap-12">
-                        <Link>
+                        <Link to={"/wishlist"}>
                             <h2 className="flex flex-col gap-2 items-center">
                                 <GiSelfLove className="text-4xl" />
                                 Wish List
                             </h2>
                         </Link>
-                        <Link>
+                        <Link to={"/gifts"}>
                             <p className="flex flex-col gap-2 items-center">
                                 <FaGift className="text-4xl" />
                                 Gift Cards
