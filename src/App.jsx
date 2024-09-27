@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './services/firebase'
 import { useDispatch } from 'react-redux'
-import { clearUser, setUser } from './features/user/userSlice'
+import { clearUser, setLoading, setUser } from './features/user/userSlice'
 
 function App() {
 
@@ -48,8 +48,11 @@ function App() {
       else {
         dispatch(clearUser());
       }
+      dispatch(setLoading(false))
     });
+
     return () => unsubscreibe();
+
   }, [dispatch])
 
   return (

@@ -12,10 +12,9 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, } from 'swiper/modules';
 
 const ShopbyCategories = () => {
-    const { data, loading, error } = useProductData();
+    const { data } = useProductData();
 
     const fixedData = data?.slice(0, 9);
-    console.log("Fetching data is ", data, error, loading);
 
     return (
         <section className="flex flex-col container mx-auto">

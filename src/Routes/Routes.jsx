@@ -48,14 +48,15 @@ export const router = createBrowserRouter([
                 element: <Collections />
 
             },
-            {
-                path: "/wishlist",
-                element: <WishList />
 
-            },
             {
                 path: "/gifts",
                 element: <Gifts />
+
+            },
+            {
+                path: "/wishlist",
+                element: <PrivetRoutes><WishList /></PrivetRoutes>
 
             },
             {
