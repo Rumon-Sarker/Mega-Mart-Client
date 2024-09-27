@@ -1,26 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/LoginImg/loginImg.png";
 import SocialLogin from "../../components/SocialLogin";
 import { FaEye, FaEyeSlash, FaLock } from "react-icons/fa";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signinUser } from "../../features/user/userSlice";
 
 
 
 const SignIn = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const user = useSelector((state) => state?.user?.user)
 
     const [showPass, setShowPass] = useState(false); // State to manage password visibility
     const handlePassShow = () => {
         setShowPass(!showPass); // Toggle password visibility
     };
-    const dispatch = useDispatch();
+
     const handaleSingIn = (data) => {
-        dispatch(signinUser({ email: data.email, password: data.password }))
-        console.log("Login data is", data);
+        dispatch(signinUser({ email: data.email, password: data.password }));
+    }
+    if (user) {
+        navigate("/")
     }
 
     return (

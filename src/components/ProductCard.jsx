@@ -1,8 +1,50 @@
 import { GiSelfLove } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { addToCart } from "../features/cart/cartSlice";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product }) => {
-    const { name, price, image, discountPrice } = product;
+    const { user } = useSelector((state) => state.user);
+    const navigate = useNavigate();
+
+    const { name, price, image, discountPrice, category, id } = product;
+
+
+    const dispatch = useDispatch();
+
+    const handlaeAddToCart = () => {
+        if (user) {
+            dispatch(addToCart({
+                id,
+                name,
+                price: Number(product.price),
+                image,
+                discountPrice,
+                category,
+                quantity: 1,
+
+            }));
+            toast.success(`${name} add to cart Success`, {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+
+            });
+        }
+        else {
+            navigate("/signin")
+        }
+
+
+
+
+    }
 
     return (
         <div className="container mx-auto">
@@ -68,7 +110,7 @@ const ProductCard = ({ product }) => {
                 </div>
 
                 <div className="mt-6 flex gap-12 text-center">
-                    <button className="px-4 py-2 btn-outline border-green-400 border rounded-full text-black  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-200"
+                    <button onClick={() => handlaeAddToCart(product)} className="px-4 py-2 btn-outline border-green-400 border rounded-full text-black  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-200"
                     >
                         Add To Card
                     </button>

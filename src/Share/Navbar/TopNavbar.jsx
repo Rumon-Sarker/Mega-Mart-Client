@@ -11,6 +11,7 @@ import { auth } from "../../services/firebase";
 
 const TopNavbar = () => {
     const dispatch = useDispatch();
+    const { totalQuantity } = useSelector((state) => state.cart);
 
     const user = useSelector((state) => state?.user?.user);
     const profileLogo = user?.email[0].toUpperCase();
@@ -55,11 +56,23 @@ const TopNavbar = () => {
                             </p>
                         </Link>
                         <Link to="/carts">
-                            <p className="flex flex-col gap-1 text-sm items-center">
+                            {/* <p className="flex flex-col gap-1 text-sm items-center">
                                 <IoCartOutline className="text-2xl" />
                                 Cart
+                                <span className={`inline-block px-3 py-1 text-sm font-semibold text-red-800 bg-orange-100 rounded-full`}>
+                                    {"text"}
+                                </span>
+                            </p> */}
+                            <div className="relative">
 
-                            </p>
+                                <IoCartOutline className="text-2xl " />
+
+                                <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded-full">
+                                    {totalQuantity ? totalQuantity : "0"}
+                                </span>
+                                Cart
+
+                            </div>
                         </Link>
 
                         {

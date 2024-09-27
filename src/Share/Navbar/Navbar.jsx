@@ -7,7 +7,7 @@ const Navbar = () => {
 
 
     return (
-        <section className={`navbar  z-30 mt-20 w-full shadow-xl bg-white `}>
+        <section className={`navbar  z-30 mt-16 w-full shadow-xl bg-white `}>
             <div className="container mx-auto flex justify-between">
                 <div className="navbar-start ">
                     <div className="dropdown">

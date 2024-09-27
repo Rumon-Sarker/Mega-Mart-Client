@@ -1,74 +1,45 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearCart, decrementQuantity, incrementQuantity, removeItem } from "../../features/cart/cartSlice";
+import { toast } from "react-toastify";
 
 const Carts = () => {
 
-    const [cartItems, setCartItems] = useState([
-        {
-            id: 1,
-            name: "Lotto Premium Flip Flop Extra Soft",
-            brand: "No Brand",
-            size: "EU:39",
-            price: 145,
-            originalPrice: 290,
-            quantity: 1,
-            image: "https://i.ibb.co.com/R66V2Fn/home-20-categories-1-5-170x.jpg",
-        },
-        {
-            id: 2,
-            name: "Sports Shoes",
-            brand: "Lotto",
-            size: "EU:42",
-            price: 299,
-            originalPrice: 599,
-            quantity: 2,
-            image: "https://i.ibb.co.com/B2m739F/home-20-categories-1-2-170x-1.jpg",
-        },
-        {
-            id: 3,
-            name: "Sports Shoes",
-            brand: "Lotto",
-            size: "EU:42",
-            price: 299,
-            originalPrice: 599,
-            quantity: 2,
-            image: "https://i.ibb.co.com/R66V2Fn/home-20-categories-1-5-170x.jpg",
-        },
-        {
-            id: 4,
-            name: "Sports Shoes",
-            brand: "Lotto",
-            size: "EU:42",
-            price: 299,
-            originalPrice: 599,
-            quantity: 2,
-            image: "https://i.ibb.co.com/B2m739F/home-20-categories-1-2-170x-1.jpg",
-        },
-        {
-            id: 5,
-            name: "Sports Shoes",
-            brand: "Lotto",
-            size: "EU:42",
-            price: 299,
-            originalPrice: 599,
-            quantity: 2,
-            image: "https://i.ibb.co.com/W2MZfLV/home-20-categories-1-4-170x.jpg",
-        },
-    ]);
+    const dispatch = useDispatch();
+
+    const { items, totalPrice, totalQuantity } = useSelector((state) => state.cart);
+    console.log(items, totalQuantity)
 
     const handleRemoveItem = (id) => {
-        setCartItems(cartItems.filter(item => item.id !== id));
+        dispatch(removeItem(id))
+    }
+
+    const handaleIncrement = (id) => {
+        dispatch(incrementQuantity(id))
+    };
+    const handaleDecrement = (id) => {
+        dispatch(decrementQuantity(id))
     };
 
-    const handleQuantityChange = (id, quantity) => {
-        setCartItems(cartItems.map(item =>
-            item.id === id ? { ...item, quantity: quantity } : item
-        ));
-    };
 
-    const getTotalPrice = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
-    };
+
+    const handleChakout = () => {
+        if (totalQuantity) {
+            dispatch(clearCart());
+            toast.success(`Comming Soooon....`, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+
+            });
+        }
+
+    }
 
     return (
         <div className="bg-gray-100 pt-48 py-10 min-h-screen">
@@ -77,30 +48,30 @@ const Carts = () => {
                 {/* Cart Items Section */}
                 <div className="lg:w-8/12 bg-white p-6 rounded-lg shadow-lg">
                     <h1 className="text-2xl font-semibold mb-6">Your Shopping Cart</h1>
-                    {cartItems.length === 0 ? (
+                    {items?.length === 0 ? (
 
                         <Link to={"/shop"} ><p className="text-center text-gray-600">Your cart is empty. <br /> <span className="text-2xl font-bold text-orange-600">You go to shoping</span> </p></Link>
                     ) : (
                         <div className="grid gap-6">
-                            {cartItems.map((item) => (
+                            {items?.map((item) => (
                                 <div
-                                    key={item.id}
+                                    key={item?.id}
                                     className="flex justify-between items-center bg-white p-4 rounded-lg shadow-md border"
                                 >
                                     {/* Product Image */}
                                     <div className="flex items-center gap-4">
                                         <img
-                                            src={item.image}
-                                            alt={item.name}
+                                            src={item?.image}
+                                            alt={item?.name}
                                             className="w-24 h-24 object-cover rounded-md"
                                         />
                                         <div>
-                                            <h2 className="text-lg font-semibold">{item.name}</h2>
+                                            <h2 className="text-lg font-semibold">{item?.name}</h2>
                                             <p className="text-sm text-gray-500">
-                                                Brand: {item.brand}, Size: {item.size}
+                                                Brand: {item?.category}, Size: {item?.size}
                                             </p>
-                                            <p className="text-lg font-semibold text-red-500">৳ {item.price}</p>
-                                            <p className="text-sm text-gray-500 line-through">৳ {item.originalPrice}</p>
+                                            <p className="text-lg font-semibold text-red-500">৳ {item?.price}</p>
+                                            <p className="text-sm text-gray-500 line-through">৳ {item?.discountPrice}</p>
                                         </div>
                                     </div>
 
@@ -108,15 +79,15 @@ const Carts = () => {
                                     <div className="flex  justify-between gap-11">
                                         <div className="flex space-x-2">
                                             <button
-                                                onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
+                                                onClick={() => handaleDecrement(item?.id)}
                                                 className="px-3 py-1 border border-gray-300 text-gray-600 hover:bg-gray-100"
-                                                disabled={item.quantity <= 1} // Disable button when quantity <= 1
+                                                disabled={item?.quantity <= 1} // Disable button when quantity <= 1
                                             >
                                                 -
                                             </button>
-                                            <span className="text-lg">{item.quantity}</span>
+                                            <span className="text-lg">{item?.quantity}</span>
                                             <button
-                                                onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
+                                                onClick={() => handaleIncrement(item?.id)}
                                                 className="px-3 py-1 border border-gray-300 text-gray-600 hover:bg-gray-100"
                                             >
                                                 +
@@ -125,7 +96,7 @@ const Carts = () => {
 
                                         {/* Delete Button */}
                                         <button
-                                            onClick={() => handleRemoveItem(item.id)}
+                                            onClick={() => handleRemoveItem(item?.id)}
                                             className="text-red-500 hover:text-red-700"
                                         >
                                             Remove
@@ -143,8 +114,8 @@ const Carts = () => {
                 <div className="lg:w-4/12 bg-gray-50 p-6 rounded-lg shadow-lg">
                     <h2 className="text-lg font-semibold mb-4">Order Summary</h2>
                     <div className="flex justify-between mb-2">
-                        <p className="text-gray-600">Subtotal ({cartItems.length} item{cartItems.length > 1 ? 's' : ''})</p>
-                        <p className="font-semibold">৳ {getTotalPrice()}</p>
+                        <p className="text-gray-600">Subtotal ({totalQuantity} item{items?.length > 1 ? 's' : ''})</p>
+                        <p className="font-semibold">৳ {totalPrice.toFixed(2)}</p>
                     </div>
                     <div className="flex justify-between mb-2">
                         <p className="text-gray-600">Shipping Fee</p>
@@ -165,9 +136,9 @@ const Carts = () => {
                     </div>
                     <div className="mt-4 flex justify-between text-lg font-semibold">
                         <p>Total</p>
-                        <p>৳ {getTotalPrice()}</p>
+                        <p>৳ {totalPrice.toFixed(2)}</p>
                     </div>
-                    <button className="mt-4 w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition duration-200">
+                    <button onClick={handleChakout} className="mt-4 w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition duration-200">
                         Proceed to Checkout
                     </button>
                 </div>

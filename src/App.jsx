@@ -8,7 +8,10 @@ import { useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './services/firebase'
 import { useDispatch } from 'react-redux'
-import { clearUser, setLoading, setUser } from './features/user/userSlice'
+import { clearUser, setLoading, setUser } from './features/user/userSlice';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -44,6 +47,7 @@ function App() {
       if (user) {
         dispatch(setUser(user))
 
+
       }
       else {
         dispatch(clearUser());
@@ -57,6 +61,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       <div className={`fixed w-full z-30 transition-transform duration-700 ${showNavbar ? 'translate-y-0' : '-translate-y-40'}`}>
         <TopNavbar />
         <Navbar />
