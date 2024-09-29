@@ -11,7 +11,7 @@ import { Navigation } from "swiper/modules";
 const Brands = () => {
     return (
         <section className="container mx-auto">
-            <h2 className="text-3xl font-semibold text-black my-6">Current Top Sellers:-  <Link className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
+            <h2 className="text-3xl font-semibold text-black my-6">Our Brands :-  <Link className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
             <div >
                 <Swiper
                     navigation={true}

@@ -9,10 +9,14 @@ import menFs from "../../../assets/AllSubBannerPngImg/MenFs.png";
 
 import CaruselSilde from "../../../components/CaruselSilde";
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
-// import useProductData from "../../../hooks/useProductData";
+
+import useProductData from "../../../hooks/useProductData";
 
 const Clothings = () => {
-    // const { data, loading, error } = useProductData();
+    const { data } = useProductData();
+
+    const Clothing = data?.filter((item) => item?.category === "Clothings");
+
 
     return (
         <section className="container mx-auto my-12  ">
@@ -47,7 +51,7 @@ const Clothings = () => {
                 </div>
                 {/* middale side */}
 
-                <CaruselSilde />
+                <CaruselSilde products={Clothing} />
 
                 {/* Right side */}
 

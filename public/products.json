@@ -4,7 +4,7 @@
         "name": "Monitor & Led Tv",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://i.ibb.co.com/Vm5KLkP/home-20-categories-1-3-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 14.7,
         "discountPrice": 13.2
     },
@@ -13,7 +13,7 @@
         "name": "Mobile",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://i.ibb.co.com/7y1dCb9/home-20-categories-1-1-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 14.7,
         "discountPrice": 13.2
     },
@@ -22,7 +22,7 @@
         "name": "Computers",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://i.ibb.co.com/W2MZfLV/home-20-categories-1-4-170x.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 14.5,
         "discountPrice": 13.0
     },
@@ -31,7 +31,7 @@
         "name": "Laptops",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://i.ibb.co.com/B2m739F/home-20-categories-1-2-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 12.5,
         "discountPrice": 11.0
     },
@@ -40,7 +40,7 @@
         "name": "Smart Tv And LED TV",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://i.ibb.co.com/Vm5KLkP/home-20-categories-1-3-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 14.5,
         "discountPrice": 13.0
     },
@@ -49,7 +49,7 @@
         "name": "Laptops",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://i.ibb.co.com/B2m739F/home-20-categories-1-2-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 12.5,
         "discountPrice": 11.0
     },
@@ -58,7 +58,7 @@
         "name": "Smart Phone",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://i.ibb.co.com/7y1dCb9/home-20-categories-1-1-170x-1.jpg",
-        "category": "popular",
+        "category": "Electronics",
         "price": 12.5,
         "discountPrice": 11.0
     },
@@ -67,8 +67,8 @@
         "name": "Speeker",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://i.ibb.co.com/R66V2Fn/home-20-categories-1-5-170x.jpg",
-        "category": "popular",
-        "price": 12.9,
+        "category": "Electronics",
+        "price": 22.9,
         "discountPrice": 11.5
     },
     {
@@ -76,133 +76,43 @@
         "name": "Games & Sports",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://i.ibb.co.com/GVd49sF/home-20-categories-1-6-170x.jpg",
-        "category": "greencoffee",
-        "price": 12.9,
+        "category": "Sports",
+        "price": 44.9,
         "discountPrice": 11.5
     },
     {
         "id": 10,
-        "name": "Breton Fish Stew",
+        "name": "Shose",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/YcCnG2q/Green-Coffee.jpg",
-        "category": "greencoffee",
-        "price": 12.9,
+        "image": "https://i.ibb.co.com/tsWQs3C/image.png",
+        "category": "Clothings",
+        "price": 14.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 10,
+        "name": "Shose",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/HzXsJCm/image.png",
+        "category": "Clothings",
+        "price": 14.9,
         "discountPrice": 11.5
     },
     {
         "id": 11,
-        "name": "Breton Fish Stew",
+        "name": "T-Shirt",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/YcCnG2q/Green-Coffee.jpg",
-        "category": "greencoffee",
+        "image": "https://i.ibb.co.com/sjwbHbL/image.png",
+        "category": "Clothings",
         "price": 12.9,
         "discountPrice": 11.5
     },
     {
         "id": 12,
-        "name": "Breton Fish Stew",
+        "name": "Jacket",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/YcCnG2q/Green-Coffee.jpg",
-        "category": "greencoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 13,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/ysmdzZP/Black-Cooffee.jpg",
-        "category": "blackcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 14,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/ysmdzZP/Black-Cooffee.jpg",
-        "category": "blackcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 15,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/ysmdzZP/Black-Cooffee.jpg",
-        "category": "blackcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 16,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/ysmdzZP/Black-Cooffee.jpg",
-        "category": "blackcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 17,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/3MPLcrY/populer7.jpg",
-        "category": "normalcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 18,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/3MPLcrY/populer7.jpg",
-        "category": "normalcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 19,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/3MPLcrY/populer7.jpg",
-        "category": "normalcoffee",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 20,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/9HyFs73/offer1.jpg",
-        "category": "offer",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 21,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/9HyFs73/offer1.jpg",
-        "category": "offer",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 22,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/9HyFs73/offer1.jpg",
-        "category": "offer",
-        "price": 12.9,
-        "discountPrice": 11.5
-    },
-    {
-        "id": 23,
-        "name": "Breton Fish Stew",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://i.ibb.co/9HyFs73/offer1.jpg",
-        "category": "offer",
+        "image": "https://i.ibb.co.com/YTjcCgq/image.png",
+        "category": "Clothings",
         "price": 12.9,
         "discountPrice": 11.5
     }

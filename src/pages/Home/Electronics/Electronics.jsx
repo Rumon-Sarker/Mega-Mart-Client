@@ -11,8 +11,14 @@ import watch from "../../../assets/AllSubBannerPngImg/watch.png";
 
 import CaruselSilde from "../../../components/CaruselSilde";
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
+import useProductData from "../../../hooks/useProductData";
 
 const Electronics = () => {
+
+    const { data } = useProductData();
+
+    const ElectronicsData = data?.filter((item) => item?.category === "Electronics");
+
     return (
         <section className="container mx-auto my-12  ">
             <h2 className="text-3xl font-semibold text-black my-6">Electronics & Offices
@@ -46,7 +52,7 @@ const Electronics = () => {
                 </div>
                 {/* middale side */}
 
-                <CaruselSilde />
+                <CaruselSilde products={ElectronicsData} />
 
                 {/* Right side */}
 
