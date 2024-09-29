@@ -15,11 +15,11 @@ const HomeDescText = () => {
             {/* This part is always visible */}
             <div>
                 <p>
-                    Custom CMS Block - Phasellus volutpat magna id mauris sodales et ornare urna molestie. Mauris non sem tincidunt, hendrerit nisi quis honcus felis. Suspendisse tempus mi durna in mattis nisl egestas quis. Proin nisi justo consectetur sed lacus an bibendum commodo diam. Praesent vulputate arcu eros quis accumsan odio malesuada at. Nulla vel ante magna. Cras ultricies nulla porttitor metus cursus malesuada. Sed convallis tempor ante ac semperos.
+                    Embodying centuries of history, our product is a testament to timeless craftsmanship. With origins dating back to the 1500s, each piece has been designed to capture the essence of classic elegance while transitioning seamlessly into the digital age. Perfect for those who appreciate the blend of tradition and modernity, our product is both a nod to the past and a step into the future.
                 </p>
                 <br />
                 <p>
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis fermentum turpis diam, sed volutpat nibh sagittis eget. Phasellus eu justo est. Curabitur tortor magna, faucibus ut nunc euismod, placerat placerat arcu. Morbi vitae mauris consequat, feugiat velit suscipit, imperdiet nunc. Integer rhoncus sagittis tincidunt. Suspendisse finibus quam euismod est mollis, quis lobortis arcu consectetur. Mauris tincidunt ante molestie, tempor turpis vitae, fermentum magna. Vestibulum mattis hendrerit vulputate. Sed pulvinar accumsan ex, et vulputate eros sagittis sit amet.
+                    From the age of print to the dawn of the digital era, we have consistently led the way in innovation. As pioneers in the industry, we’ve embraced every leap forward, whether it was the rise of desktop publishing or the evolution of e-commerce. Our platform combines cutting-edge technology with a commitment to provide a seamless shopping experience that honors the traditions of quality craftsmanship..
                 </p>
                 <br />
                 <p>
@@ -30,10 +30,10 @@ const HomeDescText = () => {
 
 
             <div className={`transition-all duration-500  overflow-hidden ${show ? 'max-h-screen' : 'max-h-0'} mt-5 `}>
-                <h1 className="text-3xl">What is Lorem Ipsum ?</h1>
+                <h1 className="text-3xl">Whay MegaMart ?</h1>
                 <br />
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Our journey began over five centuries ago, evolving with the times while staying true to our roots in craftsmanship and innovation. From the printing press to modern digital platforms, we’ve embraced every leap in technology. Our commitment to quality is timeless, ensuring that no matter how the industry changes, our products remain the standard. Discover the heritage and passion behind every item we offer, crafted with care and precision for the modern shopper
                 </p>
             </div>
             <div className="text-center text-xl font-serif my-4">

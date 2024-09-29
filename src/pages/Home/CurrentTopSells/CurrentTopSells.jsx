@@ -64,7 +64,7 @@ const CurrentTopSells = () => {
                         {/* Left Side: Product Information */}
                         <div className="flex-1 text-white space-y-3">
                             <h2 className="text-4xl font-bold">World Fist HD LED Tv</h2>
-                            <p className="text-2xl font-semibold">Lorem ipsum dolor, sit amet  Suscipit, repudiandae.</p>
+                            <p className="text-2xl font-semibold">First Order and Take this offer.Not miss this offers</p>
                             <button className="px-6 py-4 bg-gradient-to-r from-purple-700 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
                                 Shop Now
                             </button>
@@ -87,7 +87,7 @@ const CurrentTopSells = () => {
                         {/* Left Side: Product Information */}
                         <div className="flex-1 text-white space-y-3">
                             <h2 className="text-4xl font-bold">Rewords Programs</h2>
-                            <p className="text-xl font-semibold">Lorem ipsum dolor, sit amet consecSuscipit, repudiandae.</p>
+                            <p className="text-xl font-semibold">Welcome to megamart and Take to Your Rewords</p>
                             <button className="px-6 py-4 bg-gradient-to-r from-yellow-500 to-pink-500 font-semibold rounded-full hover:bg-purple-100 transition">
                                 Shop Now
                             </button>

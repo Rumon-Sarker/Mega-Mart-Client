@@ -115,5 +115,113 @@
         "category": "Clothings",
         "price": 12.9,
         "discountPrice": 11.5
+    },
+    {
+        "id": 13,
+        "name": "Sofa Set",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/dPqbPXV/image-125-removebg-preview-1.png",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 14,
+        "name": "Umberella",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/5cML8jp/G03-200x200-5.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 15,
+        "name": "Hulsta",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/N19fB93/G03-200x200-4.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 16,
+        "name": "Table",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/60B803Q/G03-200x200-3.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 17,
+        "name": "Chair Set",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/F7Byt9k/G03-200x200-2.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 18,
+        "name": "Bed Set",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/bdCWfxb/G03-200x200-1.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 19,
+        "name": "Bed Set",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/zNvbnQJ/G03-200x200.jpg",
+        "category": "Furnitures",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 20,
+        "name": "Glass Cooking Pot",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/YTrdmj4/G03-200x200-10.jpg",
+        "category": "Kids&Kitchen",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 21,
+        "name": "Frok Steel",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/JmBthmQ/G03-200x200-9.jpg",
+        "category": "Kids&Kitchen",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 22,
+        "name": "Gash Stove",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/CtGVg2N/G03-200x200-8.jpg",
+        "category": "Kids&Kitchen",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 23,
+        "name": "Bulldozer Toy",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/1nBHyrD/G07-200x200.jpg",
+        "category": "Kids&Kitchen",
+        "price": 12.9,
+        "discountPrice": 11.5
+    },
+    {
+        "id": 24,
+        "name": "Tricycle Red",
+        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "https://i.ibb.co.com/84qgTZM/G03-200x200-7.jpg",
+        "category": "Kids&Kitchen",
+        "price": 12.9,
+        "discountPrice": 11.5
     }
 ]

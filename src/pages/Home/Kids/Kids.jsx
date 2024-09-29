@@ -11,9 +11,15 @@ import cooker from "../../../assets/AllSubBannerPngImg/cooker.png";
 import offerToy from "../../../assets/AllSubBannerPngImg/offerToy.png";
 
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
+import useProductData from "../../../hooks/useProductData";
 
 
 const Kids = () => {
+
+
+    const { data } = useProductData();
+
+    const KidsKitchen = data?.filter((item) => item?.category === "Kids&Kitchen");
     return (
         <section className="container mx-auto my-12  ">
             <h2 className="text-3xl font-semibold text-black my-6">Kids, Household & Kitchens
@@ -47,7 +53,7 @@ const Kids = () => {
                 </div>
                 {/* middale side */}
 
-                <CaruselSilde />
+                <CaruselSilde products={KidsKitchen} />
 
                 {/* Right side */}
 

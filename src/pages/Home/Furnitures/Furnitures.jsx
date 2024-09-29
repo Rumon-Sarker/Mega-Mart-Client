@@ -8,8 +8,14 @@ import sofa from "../../../assets/AllSubBannerPngImg/sofa.png";
 import mora from "../../../assets/AllSubBannerPngImg/chair-png-40525.png";
 
 import CategoryBottomBanner from "../../../components/CategoryBottomBanner";
+import useProductData from "../../../hooks/useProductData";
 
 const Furnitures = () => {
+
+    const { data } = useProductData();
+
+    const ElectronicsData = data?.filter((item) => item?.category === "Furnitures");
+
     return (
         <section className="container mx-auto my-12  ">
             <h2 className="text-3xl font-semibold text-black my-6">Home, Furnitures & Decor
@@ -43,7 +49,7 @@ const Furnitures = () => {
                 </div>
                 {/* middale side */}
 
-                <CaruselSilde />
+                <CaruselSilde products={ElectronicsData} />
 
                 {/* Right side */}
 

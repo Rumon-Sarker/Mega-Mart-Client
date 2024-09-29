@@ -1,5 +1,4 @@
 
-import useProductData from "../../../hooks/useProductData";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,9 +9,10 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, } from 'swiper/modules';
+import useDataFetch from "../../../hooks/useDataFetch";
 
 const ShopbyCategories = () => {
-    const { data } = useProductData();
+    const { data } = useDataFetch("category.json");
 
     const fixedData = data?.slice(0, 9);
 
