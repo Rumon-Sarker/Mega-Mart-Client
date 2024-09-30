@@ -7,13 +7,13 @@ const WishList = () => {
             id: 1,
             name: 'Wishlist Product 1',
             price: 29.99,
-            image: 'https://via.placeholder.com/100',
+            image: 'https://i.ibb.co.com/GVd49sF/home-20-categories-1-6-170x.jpg',
         },
         {
             id: 2,
             name: 'Wishlist Product 2',
             price: 19.99,
-            image: 'https://via.placeholder.com/100',
+            image: 'https://i.ibb.co.com/GVd49sF/home-20-categories-1-6-170x.jpg',
         },
     ]);
 
