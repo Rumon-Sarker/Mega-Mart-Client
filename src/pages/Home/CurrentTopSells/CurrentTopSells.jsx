@@ -32,7 +32,7 @@ const CurrentTopSells = () => {
 
     return (
         <section className="flex flex-col container mx-auto">
-            <h2 className="text-3xl font-semibold text-black my-6">Current Top Sellers:-  <Link className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
+            <h2 className="text-3xl font-semibold text-black my-6">Current Top Sellers:-  <Link to={"/shop"} className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
             <div>
                 <Swiper
                     modules={[Pagination]}

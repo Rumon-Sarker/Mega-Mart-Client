@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Collections = () => {
@@ -98,7 +99,7 @@ const Collections = () => {
                                 <h2 className="text-xl font-semibold mb-2">{collection.name}</h2>
                                 <p className="text-gray-600 mb-4">{collection.recipe}</p>
                                 <button className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition">
-                                    Shop Now
+                                    <Link to={"/shop"}>Shop Now</Link>
                                 </button>
                             </div>
                         </div>

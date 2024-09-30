@@ -22,7 +22,7 @@ const Electronics = () => {
     return (
         <section className="container mx-auto my-12  ">
             <h2 className="text-3xl font-semibold text-black my-6">Electronics & Offices
-                :-  <Link className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
+                :-  <Link to={"/shop"} className="underline ml-7 text-gray-500 text-base">View all</Link></h2>
 
             {/* left side  */}
             <div className="flex container mx-auto   justify-between items-center">
@@ -86,7 +86,7 @@ const Electronics = () => {
                     </div>
                     <Link>
                         <div className="w-[400px] h-32 hover:underline rounded-lg flex items-center justify-center shadow-lg">
-                            <p className="text-2xl">View all categories</p>
+                            <Link to={"/shop"}><p className="text-2xl">View all categories</p></Link>
                         </div>
                     </Link>
                 </div>

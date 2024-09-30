@@ -24,7 +24,7 @@ const TopNavbar = () => {
         <section className="navbar bg-orange-500 fixed z-30 py-3 px-8 text-white">
             <div className="flex container mx-auto justify-between items-center">
                 <h3 className="text-4xl font-bold italic font-mono border-b-2">MegaMart</h3>
-                <h2>Available 24/7 at <br /> 091 234-ELLA</h2>
+                <h2>Available 24/7 at <br /> 091 234-mart</h2>
                 <div className="w-5/12">
                     <label className="input  input-bordered rounded-full flex items-center gap-2">
                         <input type="text" className="grow text-black" placeholder="Search the store" />
